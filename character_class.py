@@ -138,3 +138,23 @@ class CharacterClass:
             }
         }
     }
+
+    @classmethod
+    def get_character_class_info(cls, character_class_name: str) -> Dict:
+        """Get certain character class information"""
+        # It will return the 'Technomancer' character class info unless asked otherwise
+        return cls.CLASSES.get(character_class_name, cls.CLASSES['Technomancer'])
+    
+    @classmethod
+    def get_all_character_classes(cls) -> List[str]:
+        """Get a full list of all the available character classes"""
+        return list(cls.CLASSES.keys())
+    
+    @classmethod
+    def get_character_class_bonus(cls, character_class_name: str, category:str) -> float:
+        """Get XP bonus designated for a certain class and task category"""
+        class_info = cls.get_character_class_info(character_class_name)
+        return class_info['bonuses'].get(category)
+    
+
+    
