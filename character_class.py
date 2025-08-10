@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 class CharacterClass:
     """Character Class Definitions & Bonuses"""
@@ -157,4 +157,3 @@ class CharacterClass:
         return class_info['bonuses'].get(category)
     
 
-    
