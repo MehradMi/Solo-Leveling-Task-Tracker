@@ -151,9 +151,9 @@ class CharacterClass:
         return list(cls.CLASSES.keys())
     
     @classmethod
-    def get_character_class_bonus(cls, character_class_name: str, category:str) -> float:
+    def get_character_class_bonus(cls, character_class_name: str, task_category:str) -> float:
         """Get XP bonus designated for a certain class and task category"""
         class_info = cls.get_character_class_info(character_class_name)
-        return class_info['bonuses'].get(category)
+        return class_info['bonuses'].get(task_category)
     
 
