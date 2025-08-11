@@ -1,5 +1,5 @@
 from character_class import CharacterClass
-from typing import Optional, Dict, List
+from typing import Optional, Dict
 from dataclasses import dataclass
 from datetime import datetime
 
@@ -32,10 +32,18 @@ class Character:
         leveling_xp_factor = 1.15
         return int(100 * (leveling_xp_factor ** (level - 1)))
     
-    def get_xp_progress_percentage(self) -> float:
+    def get_xp_progression_percentage(self) -> float:
         """Get XP progress as percentage"""
         if self.xp_to_next_level == 0:
             return 100.0
         return (self.current_xp / self.xp_to_next_level) * 100
 
-    # TODO: There are a few methods left to add. 
+    def get_character_class_info(self) -> Dict:
+        """Get information about character's class"""
+        return CharacterClass.get_character_class_info(self.character_class)
+    
+    def get_total_stat_points(self):
+        """Get sum of all stats"""
+        return sum(self.stats.values()) if self.stats else 0
+
+    # TODO: get_power_level method (I might need it but not right now!) 
