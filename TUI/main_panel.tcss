@@ -1,0 +1,89 @@
+Screen {
+    background: $surface;
+}
+
+.character_panel {
+    width: 25;
+    background: $primary-background;
+    border: solid $primary;
+    margin: 1;
+    padding: 1;
+}
+
+.main_content {
+    background: $background;
+    margin: 1;
+}
+
+.top_bar {
+    height: 6;
+    background: $panel;
+    border: solid $secondary;
+    margin-bottom: 1;
+}
+
+.time_display {
+    text-style: bold;
+    text-align: center;
+    color: $accent;
+    content-align: center middle;
+}
+
+#xp_header {
+    text-align: center;
+    text-style: bold;
+    color: $warning;
+}
+
+#xp_progress {
+    margin: 1;
+}
+
+#xp_numbers {
+    text-align: center;
+    color: $success;
+}
+
+#menu_header {
+    text-align: center;
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+}
+
+#main_menu {
+    border: solid $primary;
+    height: 1fr;
+}
+
+#ascii_art {
+    color: $accent;
+    text-align: center;
+}
+
+#stats_header, #achievements_header {
+    text-align: center;
+    text-style: bold;
+    color: $warning;
+    margin-top: 1;
+}
+
+TimerWidget {
+    width: 1fr;
+    border: solid $success;
+    padding: 1;
+}
+
+XPProgressWidget {
+    width: 1fr;
+    border: solid $warning;  
+    padding: 1;
+}
+
+ListView > ListItem {
+    padding: 1;
+}
+
+ListView > ListItem:hover {
+    background: $boost;
+}

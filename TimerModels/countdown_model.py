@@ -21,5 +21,3 @@ class CountdownTimer:
 
             print(f"{hours:02}:{minuts:02}:{seconds:02}")
             time.sleep(1)
-
-
